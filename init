@@ -1,0 +1,23 @@
+import openpyxl as o
+from openpyxl import Workbook
+
+wb = Workbook()
+
+ws = wb.active
+
+ws['A1'] = 'Приве!'
+if ws['A1'] != 0 :
+    ws['A2'] = 15
+else: ws['A2'] = -1
+
+import os 
+
+current_dir = os.getcwd()
+print(f"Текущая директория: {current_dir}")
+
+os.mkdir('new_folder')  # Одна директория
+
+current_dir = os.getcwd()
+print(f"Текущая директория: {current_dir}")
+
+wb.save('new_folder/попытка.xlsx')
