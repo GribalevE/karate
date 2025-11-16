@@ -21,6 +21,7 @@ current_dir = os.getcwd()
 print(f"Текущая директория: {current_dir}")
 
 wb.save('new_folder/попытка.xlsx')
+
 def create_upload_folder(folder_path="uploads"):
     """
     Создает папку для загрузки файлов
@@ -40,3 +41,4 @@ def create_upload_folder(folder_path="uploads"):
 
 # Использование
 upload_dir = create_upload_folder()
+
