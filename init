@@ -21,3 +21,22 @@ current_dir = os.getcwd()
 print(f"Текущая директория: {current_dir}")
 
 wb.save('new_folder/попытка.xlsx')
+def create_upload_folder(folder_path="uploads"):
+    """
+    Создает папку для загрузки файлов
+    """
+    try:
+        # Создаем папку, если она не существует
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+            print(f"Папка '{folder_path}' успешно создана")
+        else:
+            print(f"Папка '{folder_path}' уже существует")
+        
+        return folder_path
+    except Exception as e:
+        print(f"Ошибка при создании папки: {e}")
+        return None
+
+# Использование
+upload_dir = create_upload_folder()
